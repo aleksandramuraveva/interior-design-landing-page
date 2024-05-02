@@ -1,14 +1,145 @@
 @import "reset.css";
+/*...impoting fonts...*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap');
 
 /*.................*/
 
 :root {
 	--primary: ;
 	--secondary: ;
-	--text: #333;
+	--white: #fff;
+	--black: #333;
 
 }
 
+.cormorant-garamond-regular {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cormorant-garamond-bold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 body {
 	background: #555;
+	font-family: "Cormorant Garamond", serif;
+  	font-size: 1rem;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1100px;
+	margin-inline: auto;
+	overflow: hidden;
+	/*border: 1px solid black;*/
+}
+
+.main {
+	overflow: hidden;
+}
+
+
+/*...header style...*/
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: transparent;
+	z-index: 999;
+	border: 2px dashed pink;
+}
+
+.nav {
+	border: 1px solid white;
+	position: relative;
+	height: 3.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__menu {
+	border: 3px dashed green;
+}
+
+.nav__logo {
+	color: var(--white);
+	font-weight: 600;
+}
+
+.nav__closeBtn,
+.nav__hamburger {
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: var(--white);
+}
+
+
+
+/*...header style ends...*/
+
+
+
+
+
+
+
+
+
+/*....MEDIA QUERIES....*/
+
+/*Mobile nav*/
+@media (max-width: 1100px) {
+	.nav__menu {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		background-color: hsla(0,0,100%, 0.1);
+		backdrop-filter: blur(15px);
+		-webkit-backdrop-filter: blur(15px);
+		width: 80%;
+		height: 100%;
+		padding: 5rem 3rem 0;
+		transition: right 0.5s;
+	}
+	.nav__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 3rem;
+	}
+	.nav__link {
+		color: var(--white);
+		font-weight: 600;
+	}
+	.nav__link:hover {
+		text-decoration: underline;
+		opacity: 0.8;
+	}
+
+	.nav__closeBtn {
+		position: absolute;
+		top: 1rem;
+		right: 1.5rem;
+	}
+	.nav__menu--show {
+		right: 0;
+	}
 }
