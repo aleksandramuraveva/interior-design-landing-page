@@ -1,0 +1,14 @@
+@import "reset.css";
+
+/*.................*/
+
+:root {
+	--primary: ;
+	--secondary: ;
+	--text: #333;
+
+}
+
+body {
+	background: #555;
+}
