@@ -88,11 +88,28 @@ img {
 
 }
 
+.nav__list {
+	display: flex;
+	flex-direction: row;
+	column-gap: 4rem;
+}
+
+.nav__link {
+	color: var(--white);
+	font-weight: 600;
+}
+.nav__link:hover {
+	text-decoration: underline;
+	color: var(--accent);
+	opacity: 0.8;
+}
+
 .nav__closeBtn,
 .nav__hamburger {
 	font-size: 1.5rem;
 	cursor: pointer;
 	color: var(--white);
+	display: none;
 }
 
 
@@ -143,7 +160,7 @@ img {
 .hero__title {
 	color: var(--white);
 	font-size: 4rem;
-	margin-bottom: 2.5rem;
+	margin-bottom: 2rem;
 	font-weight: 700;
 }
 
@@ -186,7 +203,7 @@ img {
 	display: flex;
 
 	display: grid;
-	gap: 1.3rem;
+	gap: 1.2rem;
 }
 
 .hero__socialLink {
@@ -275,14 +292,11 @@ img {
 		flex-direction: column;
 		row-gap: 3rem;
 	}
-	.nav__link {
-		color: var(--white);
-		font-weight: 600;
-	}
-	.nav__link:hover {
-		text-decoration: underline;
-		color: var(--accent);
-		opacity: 0.8;
+	
+
+	.nav__closeBtn,
+	.nav__hamburger {
+	display: block;
 	}
 
 	.nav__closeBtn {
@@ -293,4 +307,35 @@ img {
 	.nav__menu--show {
 		right: 0;
 	}
+/*Changing size and gaps for smaller screen */
+	.hero__title {
+	font-size: 3.4rem;
+	margin-bottom: 1rem;
+	}
+
+	.hero__socials {
+	gap: 0.7rem;
+	}
+
+	.hero__socialLink {
+	font-size: 1.4rem;
+	}
 }
+
+@media (max-width: 740px) {
+
+	.hero__title {
+	font-size: 2.82rem;
+	margin-bottom: 0.5rem;
+	}
+
+	.hero__socials {
+	gap: 0.4rem;
+	}
+
+	.hero__socialLink {
+	font-size: 1.3rem;
+	}
+
+}
+
